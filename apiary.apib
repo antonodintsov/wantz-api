@@ -13,80 +13,138 @@ Polls is a simple API allowing consumers to view polls and vote in them.
     + limit (number) - count return
 
 + Response 200 (application/json)
-    [
-            {
-                type: "product",
-                item: {
-                    id: "id",
-                    title: "title",
-                    description: "description",
-                    comments_count: "comments_count",
-                    price: "price",
-                    media: [
-                        {
-                            path: "path"
-                        },
-                        {
-                            path: "path"
-                        },
-                    ]
+    {
+      "body": [
+        {
+          "type": "product",
+          "object": {
+            "id": 26,
+            "title": "product-title",
+            "description": "product-description",
+            "comments_count": 44,
+            "price": 90,
+            "media": [
+              {
+                "path": "http://wantz.maxp.ocd/images/test.png"
+              },
+              {
+                "path": "http://wantz.maxp.ocd/images/test.png"
+              }
+            ]
+          }
+        },
+        {
+          "type": "article",
+          "object": {
+            "id": 55,
+            "title": "title",
+            "description": "description",
+            "items": [
+              {
+                "type": "product",
+                "item": {
+                  "id": 69,
+                  "title": "product-title",
+                  "description": "product-description",
+                  "comments_count": 53,
+                  "price": 83,
+                  "media": [
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    },
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    }
+                  ]
                 }
-            },
-            {
-              "type": "article",
-              "item": {
-                "id": "id",
-                "title": "title",
-                "description": "description",
-                "products": [
-                  {
-                    id: "id",
-                    title: "title",
-                    description: "description",
-                    comments_count: "comments_count",
-                    price: "price",
-                    media: [
-                        {
-                            path: "path"
-                        },
-                        {
-                            path: "path"
-                        },
-                    ]
-                  }
-                ],
-                "media": {
-                  "path": "path"
+              },
+              {
+                "type": "product",
+                "item": {
+                  "id": 31,
+                  "title": "product-title",
+                  "description": "product-description",
+                  "comments_count": 17,
+                  "price": 54,
+                  "media": [
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    },
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    }
+                  ]
                 }
               }
-            },
-            {
-              "type": "feed_collection",
-              "item": {
-                "id": "id",
-                "title": "title",
-                "template": "template-1",
-                "products": [
-                  {
-                    id: "id",
-                    title: "title",
-                    description: "description",
-                    comments_count: "comments_count",
-                    price: "price",
-                    media: [
-                        {
-                            path: "path"
-                        },
-                        {
-                            path: "path"
-                        },
-                    ]
-                  }
-                ],
-                "description": "description",
-                "media": {
-                  "path": "path"
-                }
-              }
+            ],
+            "media": {
+              "path": "http://wantz.maxp.ocd/images/test.png"
             }
-        ]
+          }
+        },
+        {
+          "type": "feed_collection",
+          "object": {
+            "id": 88,
+            "title": "feed-collection-title",
+            "template": "template-1",
+            "items": [
+              {
+                "type": "product",
+                "item": {
+                  "id": 23,
+                  "title": "product-title",
+                  "description": "product-description",
+                  "comments_count": 54,
+                  "price": 59,
+                  "media": [
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    },
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "product",
+                "item": {
+                  "id": 95,
+                  "title": "product-title",
+                  "description": "product-description",
+                  "comments_count": 62,
+                  "price": 67,
+                  "media": [
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    },
+                    {
+                      "path": "http://wantz.maxp.ocd/images/test.png"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "competition",
+                "item": {
+                  "id": 34,
+                  "title": "competition-title",
+                  "description": "competition-description"
+                }
+              }
+            ],
+            "description": "feed-collection-description",
+            "media": {
+              "path": "http://wantz.maxp.ocd/images/test.png"
+            }
+          }
+        }
+      ],
+      "status": 200,
+      "duration": {
+        "time": 0.15399999999999
+      },
+      "count": 3,
+      "action": "success",
+    }
