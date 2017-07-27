@@ -5,9 +5,39 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-
+Models:<br/>
+    Product model<br/>
+    id - product id<br/>
+    title - product title<br/>
+    description - product description<br/>
+    comments_count - count comments on product<br/>
+    price - product price<br/>
+    media - array of objects (each object contain path to product image)<br/><br/>
+Article:<br/>
+    id - product id<br/>
+    title - article title<br/>
+    description - article description<br/>
+    items - array of product objects:<br/>
+    media - contain object (object contain path to article background image)):<br/><br/>
+FeedCollection:<br/>
+    id - product id<br/>
+    title - feed collection title<br/>
+    description - feed collection description<br/>
+    template - type of template to display<br/>
+    items - array of objects (object may be product or competition)<br/>
+    media - contain object (object contain path to feed collection  background image)):<br/>
+Competition:
+    id - product id<br/>
+    title - feed collection title<br/>
+    description - feed collection description<br/>
 ## Feed [/api/v1/feed]
 ### Feed [GET]
+
+Return array of object
+Objects can be of type : product, article or feed_collection
+see models description
+
+
 + Parameters
     + start (number) - start from
     + limit (number) - count return
